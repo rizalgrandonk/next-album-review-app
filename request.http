@@ -1,0 +1,35 @@
+###
+GET http://localhost:3000/api/review
+
+###
+GET http://localhost:3000/api/review/mencoba-route
+
+###
+DELETE  http://localhost:3000/api/review/mencoba-route
+
+###
+POST http://localhost:3000/api/review
+Content-Type: application/json
+
+{
+  "title": "Mencoba Route",
+  "author": "Sukirman",
+  "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem modi assumenda, dicta laudantium iusto ut earum saepe, amet doloremque quas accusamus sit reiciendis. Molestiae nulla culpa accusantium error maiores debitis!",
+  "album": "Gubrak",
+  "band": "Band Njero",
+  "genre": "Koplo Clasical"
+}
+
+###
+PUT  http://localhost:3000/api/review/mencoba-route
+Content-Type: application/json
+
+{
+  "title": "Mencoba Route",
+  "author": "Sukirman",
+  "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem modi assumenda, dicta laudantium iusto ut earum saepe, amet doloremque quas accusamus sit reiciendis. Molestiae nulla culpa accusantium error maiores debitis!",
+  "album": "Gubrak",
+  "band": "Band Dara",
+  "genre": "Koplo Clasical"
+}
+
