@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
     <>
       <Meta />
       <Navbar />
-      <main className="container mx-auto pt-8 min-h-screen">{children}</main>
+      {children}
     </>
   );
 };

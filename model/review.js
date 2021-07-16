@@ -10,7 +10,7 @@ const reviewSchema = mongoose.Schema({
   genre: String,
   selectedFile: {
     type: String,
-    default: "https://source.unsplash.com/400x300/?music",
+    default: "https://source.unsplash.com/1600x900/?music",
   },
   createdAt: {
     type: Date,
@@ -18,6 +18,7 @@ const reviewSchema = mongoose.Schema({
   },
 });
 
+// const Review = mongoose.model("Review", reviewSchema);
 const Review = mongoose.models.Review || mongoose.model("Review", reviewSchema);
 
 export default Review;

@@ -21,15 +21,15 @@ Content-Type: application/json
 }
 
 ###
-PUT  http://localhost:3000/api/review/mencoba-route
+PUT  http://localhost:3000/api/review/testing-post-again-and-again
 Content-Type: application/json
 
 {
-  "title": "Mencoba Route",
-  "author": "Sukirman",
-  "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem modi assumenda, dicta laudantium iusto ut earum saepe, amet doloremque quas accusamus sit reiciendis. Molestiae nulla culpa accusantium error maiores debitis!",
-  "album": "Gubrak",
-  "band": "Band Dara",
-  "genre": "Koplo Clasical"
+  "title": "Testing Again and Again",
+  "author": "Grandonk",
+  "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ut natus delectus adipisci modi quo cum nemo numquam optio, quibusdam repudiandae assumenda odio, itaque sequi commodi at non aliquam nisi placeat voluptas maiores magnam! Quisquam est repudiandae voluptates? Exercitationem optio unde voluptates excepturi voluptatibus fuga quas sed repudiandae quia tenetur doloremque modi officia dolorum, eveniet, asperiores quos! Hic deserunt natus qui beatae, magni voluptatem numquam quibusdam error accusantium est accusamus architecto aspernatur obcaecati molestiae cupiditate quo autem veniam nam voluptate repudiandae ea? Laborum nesciunt soluta aspernatur. Eligendi debitis quo, harum vero nesciunt culpa, sunt non nihil delectus earum quidem magnam sint quam dolor impedit! Consectetur omnis quod temporibus quisquam ipsa, voluptate sint quas, repellendus culpa dolores consequatur earum recusandae, enim assumenda mollitia dolore natus. Perspiciatis inventore iure nobis voluptates impedit eum, laboriosam excepturi aliquam cumque commodi molestias dicta architecto doloremque minus consequatur sit, sint, molestiae quis corporis laudantium? Omnis explicabo, architecto, vitae earum, soluta accusantium atque inventore amet labore id quidem animi. Possimus beatae, necessitatibus tempore libero facilis accusamus aspernatur dolores dignissimos voluptatem? Provident, doloribus fugit magni ipsa, sapiente et numquam mollitia saepe, ut eligendi vero! Aperiam odio tempora officia optio, at accusamus, assumenda veritatis esse nostrum, ut dignissimos necessitatibus.",
+  "album": "Duarrr",
+  "band": "Pentil Band",
+  "genre": "Jazz Koplo"
 }
 

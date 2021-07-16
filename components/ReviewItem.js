@@ -4,10 +4,10 @@ const ReviewItem = ({ review }) => {
   const exert = review.content.split(" ").slice(0, 10).join(" ") + " ...";
 
   return (
-    <Link href={`/reviews/${review.slug}`}>
-      <a className="w-72 h-96 m-4 shadow-md rounded-md overflow-hidden transition-all ease-in hover:shadow-lg">
+    <Link href={`/review/${review.slug}`}>
+      <a className="w-72 h-96 m-3 shadow-md rounded-md overflow-hidden transition-all ease-in hover:shadow-lg">
         <div
-          className="w-full h-44 bg-cover bg-top text-white relative"
+          className="w-full h-44 bg-cover text-white relative"
           style={{ backgroundImage: `url(${review.selectedFile})` }}
         >
           <span className="block w-full h-full bg-black opacity-40"></span>
