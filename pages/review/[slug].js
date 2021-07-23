@@ -42,7 +42,9 @@ export async function getServerSideProps(context) {
   const { slug } = context.params;
 
   try {
-    const res = await fetch(`/api/review/${slug}`);
+    const res = await fetch(
+      `https://albumreview.vercel.app/api/review/${slug}`
+    );
     const review = await res.json();
 
     return {
