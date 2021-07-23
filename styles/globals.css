@@ -1,16 +1,14 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+.quill {
+  height: 25rem;
+  width: 100%;
+  margin-bottom: 3rem;
+  box-shadow: none;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.ql-editor {
+  background-color: white;
 }
 
-* {
-  box-sizing: border-box;
+.ql-toolbar {
+  background-color: white;
 }

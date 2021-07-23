@@ -5,7 +5,7 @@ const handler = async (req, res) => {
   switch (req.method) {
     case "GET":
       try {
-        const reviews = await Review.find();
+        const reviews = await Review.find().sort("-createdAt");
 
         return res.status(200).send(reviews);
       } catch (err) {
@@ -13,14 +13,25 @@ const handler = async (req, res) => {
       }
 
     case "POST":
-      const review = req.body;
-      const slug = review.title
+      const uploadedReview = req.body;
+      let slug = uploadedReview.title
         .toLowerCase()
         .replace(/ /g, "-")
         .replace(/[^\w-]+/g, "");
 
+      const reviews = await Review.find();
+
+      const similarReview = reviews.filter(
+        (review) =>
+          review.title.toLowerCase() === uploadedReview.title.toLowerCase()
+      );
+
+      if (similarReview.length > 0) {
+        slug = `${slug}-${similarReview.length + 1}`;
+      }
+
       const newReview = new Review({
-        ...review,
+        ...uploadedReview,
         slug,
         createdAt: new Date().toISOString(),
       });

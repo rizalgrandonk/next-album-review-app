@@ -1,0 +1,259 @@
+.content address,
+.content blockquote,
+.content dd,
+.content div,
+.content dl,
+.content dt,
+.content fieldset,
+.content form,
+.content frame,
+.content frameset,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.content noframes,
+.content ol,
+.content p,
+.content ul,
+.content center,
+.content dir,
+.content hr,
+.content menu,
+.content pre {
+  display: block;
+  unicode-bidi: embed;
+}
+
+.content li {
+  display: list-item;
+}
+
+.content head {
+  display: none;
+}
+
+.content table {
+  display: table;
+}
+
+.content tr {
+  display: table-row;
+}
+
+.content thead {
+  display: table-header-group;
+}
+
+.content tbody {
+  display: table-row-group;
+}
+
+.content tfoot {
+  display: table-footer-group;
+}
+
+.content col {
+  display: table-column;
+}
+
+.content colgroup {
+  display: table-column-group;
+}
+
+.content td,
+.content th {
+  display: table-cell;
+}
+
+.content caption {
+  display: table-caption;
+}
+
+.content th {
+  font-weight: bolder;
+  text-align: center;
+}
+
+.content caption {
+  text-align: center;
+}
+
+.content body {
+  margin: 8px;
+}
+
+.content h1 {
+  font-size: 2rem;
+  margin: 0.67em 0;
+}
+
+.content h2 {
+  font-size: 1.7rem;
+  margin: 0.75em 0;
+}
+
+.content h3 {
+  font-size: 1.27em;
+  margin: 0.83em 0;
+}
+
+.content h4,
+.content p,
+.content blockquote,
+.content ul,
+.content fieldset,
+.content form,
+.content ol,
+.content dl,
+.content dir,
+.content menu {
+  margin: 1.12em 0;
+}
+
+.content h5 {
+  font-size: 0.83em;
+  margin: 1.5em 0;
+}
+
+.content h6 {
+  font-size: 0.75em;
+  margin: 1.67em 0;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.content b,
+.content strong {
+  font-weight: bold;
+}
+
+.content blockquote {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.content i,
+.content cite,
+.content em,
+.content var,
+.content address {
+  font-style: italic;
+}
+
+.content pre,
+.content tt,
+.content code,
+.content kbd,
+.content samp {
+  font-family: monospace;
+}
+
+.content pre {
+  white-space: pre;
+}
+
+.content button,
+.content textarea,
+.content input,
+.content select {
+  display: inline-block;
+}
+
+.content big {
+  font-size: 1.17em;
+}
+
+.content small,
+.content sub,
+.content sup {
+  font-size: 0.83em;
+}
+
+.content sub {
+  vertical-align: sub;
+}
+
+.content sup {
+  vertical-align: super;
+}
+
+.content table {
+  border-spacing: 2px;
+}
+
+.content thead,
+.content tbody,
+.content tfoot {
+  vertical-align: middle;
+}
+
+.content td,
+.content th,
+.content tr {
+  vertical-align: inherit;
+}
+
+.content s,
+.content strike,
+.content del {
+  text-decoration: line-through;
+}
+
+.content hr {
+  border: 1px inset;
+}
+
+.content ol,
+.content ul,
+.content dir,
+.content menu,
+.content dd {
+  margin-left: 40px;
+}
+
+.content ol {
+  list-style-type: decimal;
+}
+
+.content ul li {
+  list-style-type: disc;
+}
+
+.content ol ul,
+.content ul ol,
+.content ul ul,
+.content ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.content u,
+.content ins {
+  text-decoration: underline;
+}
+
+.content br:before {
+  content: "\A";
+  white-space: pre-line;
+}
+
+.content center {
+  text-align: center;
+}
+
+.content :link,
+.content :visited {
+  text-decoration: underline;
+}
+
+.content :focus {
+  outline: thin dotted invert;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,14 +1,11 @@
-import axios from "axios";
-
 import Meta from "../../components/Meta";
+import styles from "./Review.module.css";
 
 const Review = ({ review }) => {
-  const exert = review.content.split(" ").slice(0, 10).join(" ") + " ...";
-
   return (
     <>
-      <Meta title={review.title} description={exert} />
-      <main>
+      <Meta title={review.title} />
+      <section>
         <div
           className="w-full bg-cover bg-center"
           style={{
@@ -16,7 +13,7 @@ const Review = ({ review }) => {
             minHeight: `70vh`,
           }}
         ></div>
-        <div className="container mx-auto pt-8 px-4">
+        <div className="container mx-auto py-8 px-16">
           <h1 className="text-5xl font-semibold mb-6 text-gray-800">
             {review.title}
           </h1>
@@ -30,28 +27,35 @@ const Review = ({ review }) => {
           <span className="inline-block font-medium mr-2 my-1 px-3 rounded text-gray-200 bg-gray-800">
             {review.genre}
           </span>
-          <p className="text-lg text-gray-700 my-12 w-11/12">
-            {review.content}
-          </p>
+          <div
+            className={styles.content}
+            dangerouslySetInnerHTML={{ __html: review.content }}
+          />
         </div>
-      </main>
+      </section>
     </>
   );
 };
 
 export default Review;
 
-export async function getServerSideProps({ query }) {
-  const slug = query.slug;
+export async function getServerSideProps(context) {
+  const { slug } = context.params;
 
   try {
-    const res = await axios.get(`http://localhost:3000/api/review/${slug}`);
-    const review = res.data;
+    const res = await fetch(`http://localhost:3000/api/review/${slug}`);
+    const review = await res.json();
 
     return {
       props: { review },
     };
   } catch (err) {
     console.log(err);
+
+    context.res.statusCode = 302;
+    context.res.setHeader("Location", `/`);
+    return {
+      notFound: true,
+    };
   }
 }

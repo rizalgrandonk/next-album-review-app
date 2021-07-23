@@ -11,7 +11,7 @@ const Navbar = () => {
         <ul>
           <li>
             <Link href="/review/create-review">
-              <a className="text-xl font-semibold px-4 py-1 rounded-lg bg-transparent text-gray-200 border-2 border-gray-200">
+              <a className="text-lg font-medium px-3 py-1 rounded bg-transparent text-gray-200 border-2 border-gray-200">
                 Create Review
               </a>
             </Link>

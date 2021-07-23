@@ -1,4 +1,6 @@
 import "tailwindcss/tailwind.css";
+import "react-quill/dist/quill.snow.css";
+import "../styles/globals.css";
 
 import Layout from "../components/Layout";
 
