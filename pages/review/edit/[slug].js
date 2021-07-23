@@ -12,7 +12,11 @@ const EditReview = () => {
   return (
     <section className="container mx-auto py-12 px-3">
       <h1 className="text-3xl md:text-4xl font-medium mb-8">Edit review</h1>
-      {!review ? <LoadingSpinner /> : <ReviewForm review={review} />}
+      {!review ? (
+        <LoadingSpinner label="Loading Content" />
+      ) : (
+        <ReviewForm review={review} />
+      )}
     </section>
   );
 };
