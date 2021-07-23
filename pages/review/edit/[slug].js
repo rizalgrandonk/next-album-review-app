@@ -2,8 +2,8 @@ import ReviewForm from "../../../components/ReviewForm";
 
 const EditReview = ({ review }) => {
   return (
-    <section className="container mx-auto py-12 px-2">
-      <h1 className="text-4xl font-medium mb-8">Edit review</h1>
+    <section className="container mx-auto py-12 px-3">
+      <h1 className="text-3xl md:text-4xl font-medium mb-8">Edit review</h1>
       <ReviewForm review={review} />
     </section>
   );

@@ -1,7 +1,15 @@
 import Link from "next/link";
 import moment from "moment";
+import { useRef } from "react";
 
 const ReviewItem = ({ review, deleted }) => {
+  const dropdownRef = useRef();
+
+  const togleDropdown = () => {
+    dropdownRef.current.classList.toggle("hidden");
+    dropdownRef.current.classList.toggle("block");
+  };
+
   const deleteReview = async (e) => {
     e.preventDefault();
     try {
@@ -18,15 +26,16 @@ const ReviewItem = ({ review, deleted }) => {
     }
   };
   return (
-    <div className="flex flex-col rounded shadow-xl w-96 h-3/4 mb-10 mx-4 bg-white overflow-hidden">
+    <div className="flex flex-col rounded shadow-xl w-96 mb-10 mx-4 bg-white overflow-hidden">
       <div
-        className="h-48 w-full bg-cover bg-center relative"
+        className="h-52 w-full bg-cover bg-center relative"
         style={{
           backgroundImage: `url("${review.selectedFile}")`,
         }}
+        onClick={togleDropdown}
       >
         <span className="block w-full h-full bg-gray-800 opacity-40"></span>
-        <div className="group inline-block absolute top-0 right-0">
+        <div className="inline-block absolute top-0 right-0">
           <button className=" text-gray-100 py-1 px-3 bg-transparent font-medium rounded inline-flex items-center">
             <svg
               className="fill-current h-8 w-8"
@@ -36,7 +45,10 @@ const ReviewItem = ({ review, deleted }) => {
               <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
             </svg>
           </button>
-          <ul className="absolute right-1 top-9 hidden text-gray-700 pt-1 group-hover:block">
+          <ul
+            ref={dropdownRef}
+            className="absolute hidden right-1 top-9 text-gray-700 pt-1 dropdown"
+          >
             <li className="">
               <Link href={`/review/edit/${review.slug}`}>
                 <a className=" bg-gray-100 hover:bg-gray-400 font-medium py-1 px-2 block whitespace-no-wrap">
@@ -55,10 +67,13 @@ const ReviewItem = ({ review, deleted }) => {
           </ul>
         </div>
       </div>
-      <div className=" p-6 flex flex-col justify-between">
-        <div className="flex-1">
-          <p className="text-sm leading-5 font-medium text-teal-600">
+      <div className="h-52 md:h-60 p-4 md:p-6 flex flex-col justify-between">
+        <div>
+          <p className="inline-block mb-1 pr-2 border-r-2 border-gray-700 text-sm leading-5 font-medium text-teal-600">
             {review.genre}
+          </p>
+          <p className="inline-block mb-1 pl-2 border-l-2 text-sm leading-5 font-medium text-teal-600">
+            {review.band}
           </p>
           <Link href={`/review/${review.slug}`}>
             <a className="block">
@@ -68,9 +83,9 @@ const ReviewItem = ({ review, deleted }) => {
             </a>
           </Link>
         </div>
-        <div className="mt-2">
+        <div className="mt-6">
           <Link href={`/review/${review.slug}`}>
-            <a className="text-teal-400 hover:text-teal-900 text-sm transition duration-150 ease-in-out">
+            <a className="block mb-4 text-teal-400 hover:text-teal-900 text-sm transition duration-150 ease-in-out">
               Read more
               <svg
                 className="chev inline-block ml-1 w-2 h-2 stroke-2 stroke-current"
@@ -95,8 +110,6 @@ const ReviewItem = ({ review, deleted }) => {
               </svg>
             </a>
           </Link>
-        </div>
-        <div className="mt-6">
           <p className="text-sm leading-5 font-medium text-gray-900">
             {review.author}
           </p>

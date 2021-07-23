@@ -63,11 +63,11 @@ const ReviewForm = ({ review }) => {
   } else {
     return (
       <form
-        className="w-full flex"
+        className="w-full flex flex-col md:flex-row md:space-x-6"
         method="post"
         onSubmit={review ? updateReview : createReview}
       >
-        <div className="w-7/12 mr-6">
+        <div className="w-fuul md:w-7/12">
           <FormInput
             type="text"
             id="title"
@@ -104,7 +104,7 @@ const ReviewForm = ({ review }) => {
             onChange={(e) => setData({ ...data, genre: e.target.value })}
           />
           <div className="w-full my-4">
-            <label className="block text-xl font-medium mb-2">
+            <label className="block text-lg md:text-xl font-medium mb-2">
               Cover Image
             </label>
             <FileBase
@@ -117,7 +117,10 @@ const ReviewForm = ({ review }) => {
           </div>
         </div>
         <div className="w-full my-4 flex flex-col">
-          <label htmlFor="content" className="block text-xl font-medium mb-2">
+          <label
+            htmlFor="content"
+            className="block text-lg md:text-xl font-medium mb-2"
+          >
             Content
           </label>
           <ReactQuill
@@ -129,7 +132,7 @@ const ReviewForm = ({ review }) => {
 
           <button
             type="submit"
-            className="text-center my-8 text-xl font-medium py-2 rounded bg-gray-800 text-gray-200 hover:bg-gray-600"
+            className="text-center my-8 text-lg md:text-xl font-medium py-2 rounded bg-gray-800 text-gray-200 hover:bg-gray-600"
           >
             {review ? "Update" : "Create"}
           </button>
