@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../public/logo.png";
 
 const Navbar = () => {
   return (
@@ -9,7 +8,7 @@ const Navbar = () => {
         <Link href="/">
           <a className="block relative h-full md:h-12 w-32 md:w-36">
             <Image
-              src={Logo}
+              src="/logo.png"
               alt=""
               layout="fill"
               objectFit="contain"
