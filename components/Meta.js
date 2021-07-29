@@ -15,7 +15,7 @@ const Meta = ({ title, keywords, description }) => {
 };
 
 Meta.defaultProps = {
-  title: "Album Reviews",
+  title: "Music Corner",
   keywords: "music, album, band, reviews, album review",
   description: "See a review of album from your favorites band",
 };
